@@ -3,7 +3,7 @@ import ContactItem from 'components/ContactItem/ContactItem';
 import css from './ContactList.module.css';
 import Loader from 'components/Loader/Loader';
 import { useSelector, useDispatch } from 'react-redux';
-import { fetchContacts, deleteContact } from 'redux/operations';
+import { fetchContacts, deleteContact } from 'redux/contacts/contactsOperations';
 
 const ContactList = () => {
     const contacts = useSelector(state => state.contacts.items);

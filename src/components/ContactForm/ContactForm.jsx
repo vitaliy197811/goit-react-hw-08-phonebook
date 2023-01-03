@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import css from './ContactForm.module.css';
 import { nanoid } from 'nanoid'
-import { addContact } from 'redux/operations';
+import { addContact } from 'redux/contacts/contactsOperations';
 
 const ContactForm = () => {
     const [ name, setName ] = useState('');
@@ -14,7 +14,7 @@ const ContactForm = () => {
     const handleChange = e => {
         switch (e.target.name) {
             case 'name':
-            setName(e.target.value);
+                setName(e.target.value);
                 break;
             case 'phone':
                 setPhone(e.target.value);

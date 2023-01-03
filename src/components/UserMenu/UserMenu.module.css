@@ -1,0 +1,25 @@
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+.name {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 700;
+}
+.btn {
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 700;
+    padding: 5px;
+    background-color: lightblue;
+    border-radius: 5px;
+    border: 2px solid blue;
+}
+
+.btn:hover, .btn:focus {
+    scale: 1.02;
+}
