@@ -25,16 +25,16 @@ const ContactList = () => {
     const onDeleteContact = id => dispatch(deleteContact(id));
 
     return(
-        isLoading && (
+        visibleContacts.length > 0 && (
             <div className={css.contacts}>
                 {isLoading && (<div className={css.loading}>Loading...<Loader /></div>)}
                 <ul className={css.contactsList}>
-                    {visibleContacts.map(({ id, name, phone }) => (
+                    {visibleContacts.map(({ id, name, number }) => (
                         <li key={id} className={css.item}>
                             <ContactItem 
                                 id={id} 
                                 name={name} 
-                                phone={phone} 
+                                number={number} 
                                 onDeleteContact={onDeleteContact} />
                         </li>
                     ))}
