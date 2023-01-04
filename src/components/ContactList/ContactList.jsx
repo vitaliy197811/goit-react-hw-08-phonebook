@@ -25,21 +25,22 @@ const ContactList = () => {
     const onDeleteContact = id => dispatch(deleteContact(id));
 
     return(
-        <div className={css.contacts}>
-            {isLoading && (<div className={css.loading}>Loading...<Loader /></div>)}
-            <ul className={css.contactsList}>
-                {visibleContacts.map(({ id, name, phone }) => (
-                    <li key={id} className={css.item}>
-                        <ContactItem 
-                            id={id} 
-                            name={name} 
-                            phone={phone} 
-                            onDeleteContact={onDeleteContact} />
-                    </li>
-                ))}
-            </ul>
-        </div>
-        
+        isLoading && (
+            <div className={css.contacts}>
+                {isLoading && (<div className={css.loading}>Loading...<Loader /></div>)}
+                <ul className={css.contactsList}>
+                    {visibleContacts.map(({ id, name, phone }) => (
+                        <li key={id} className={css.item}>
+                            <ContactItem 
+                                id={id} 
+                                name={name} 
+                                phone={phone} 
+                                onDeleteContact={onDeleteContact} />
+                        </li>
+                    ))}
+                </ul>
+            </div>
+        )
     )
 };
 

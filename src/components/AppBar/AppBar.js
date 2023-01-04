@@ -5,7 +5,7 @@ import AuthMenu from '../AuthMenu/AuthMenu';
 import css from './AppBar.module.css';
 
 const AppBar = () => {
-    const isloggedIn = useSelector(state => state.auth.isloggedIn);
+    const isloggedIn = useSelector(state => state.auth.isLoggedIn);
 
     return (
         <header className={css.header}>
